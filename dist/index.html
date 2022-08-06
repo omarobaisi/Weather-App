@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/dcd23d6329.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-container">
+          <input type="email" placeholder="" class="form-input" id="cityInput" required>
+          <p class="form-placeholder">City Name</p>
+          <button id="citySearch">Add City</button>
+        </label>
+      </div>
+      <div id="weather-container"></div>
+    </div>
+    <script id="weather-template" type="text/x-handlebars-template">
+      {{#each item}}
+        <div class="city">
+          <div class="save-remove">
+            {{#if _id}}
+              <i class="fa-solid fa-minus remove-city"></i>
+            {{else}}
+              <i class="fa-solid fa-plus save-city"></i>
+            {{/if}}
+          </div>
+          <div class="name-temp">
+            <div class="city-temp"><span class="temp">{{temperature}}</span><sup>o</sup></div>
+            <div class="city-name">{{name}}</div>
+          </div>
+          <div class="condition-pic">
+            <div class="city-pic"><img src="{{conditionPic}}" alt=""></div>
+            <div class="city-condition">{{condition}}</div>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="./jQuery/tmp/jquery.js"></script>
+    <script src="./render.js"></script>
+    <script src="./model.js"></script>
+    <script src="./controller.js"></script>
+    <script src="./main.js"></script>
+    <script src="./style.js"></script>
+  </body>
+</html>

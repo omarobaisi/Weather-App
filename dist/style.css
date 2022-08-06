@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#container {
+    height: 100vh;
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.form-input {
+    background-color: #36D1DC;
+    outline: none;
+    height: 30px;
+    width: 100%;
+    border: 0;
+    border-bottom: 3px solid #4AA9E1;
+    padding: 10px 0;
+    font-size: 20px;
+    margin: 10px 20px;
+  }
+  
+.form-placeholder {
+    font-size: 30px;
+    background-color: #36D1DC;
+    padding: 0 25px;
+    margin-right: 10px;
+    position: absolute;
+    top: -20px;
+    transition: 200ms ease-in-out;
+    pointer-events: none;
+}
+
+#citySearch {
+    height: 63px;
+    padding: 10px 0;
+    font-size: 20px;
+    background-color: #4AA9E1;
+    border: 0;
+    margin-right: 20px;
+    transition: 200ms ease-in-out;
+}
+
+
+/*!  */
+  
+#weather-container {
+    margin: 20px;
+}
+
+.city {
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border: 1px solid #4AA9E1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-remove {
+    align-self: center;
+}
+
+.save-city {
+    padding: 5px;
+    background-color: blue;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.remove-city {
+    padding: 5px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.name-temp, .condition-pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.city-name, .city-condition {
+    font-size: 25px;
+}
+
+.city-temp {
+    font-size: 40px;
+}
+
+@media (max-width: 670px) {
+    .form-container {
+        grid-template-columns: 4fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        grid-template-columns: 2fr 1fr;
+    }
+}
