@@ -23,7 +23,7 @@ body {
     height: 30px;
     width: 100%;
     border: 0;
-    border-bottom: 3px solid #4AA9E1;
+    border-bottom: 3px solid white;
     padding: 10px 0;
     font-size: 20px;
     margin: 10px 20px;
@@ -43,7 +43,8 @@ body {
 #citySearch {
     height: 63px;
     padding: 10px 0;
-    font-size: 20px;
+    font-size: 30px;
+    color: white;
     background-color: #4AA9E1;
     border: 0;
     margin-right: 20px;
