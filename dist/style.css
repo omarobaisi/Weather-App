@@ -2,6 +2,10 @@ body {
     margin: 0;
     padding: 0;
     color: white;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Inter', sans-serif;
 }
 
 #container {
