@@ -9,11 +9,11 @@ app.use(express.static(path.join(__dirname, "dist")));
 app.use(express.static(path.join(__dirname, "node_modules")));
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/weatherApp', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URL||'mongodb://localhost/weatherApp');
 
 app.use("/", api);
 
 const port = 3000;
-app.listen(port, function () {
+app.listen(process.env.PORT || PORT, function () {
   console.log(`Server running on ${port}`);
 });
